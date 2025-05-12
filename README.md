@@ -1,64 +1,74 @@
-📊 Project Title: Comprehensive Conflict Timeline Analysis (April–May 2025)
+# 📊 Comprehensive Conflict Timeline Analysis (April–May 2025)
 
+## 🎯 Objective
+To provide a **data-driven, geospatial and temporal analysis** of the military escalation between India and Pakistan during April–May 2025. The project combines confirmed fatality data, strategic incident summaries, and interactive visualizations — deployed as a Streamlit web application.
 
-🎯 Objective:
-To provide a data-driven, geospatial and temporal analysis of the military escalation between India and Pakistan during April–May 2025, using confirmed fatality counts, operation names, and strategic event details — presented interactively via a Streamlit web app.
+---
 
-📦 Core Features:
-Verified Event Log
+## 📦 Core Features
 
-Based on 8 high-profile incidents, each tagged with:
+### ✅ Verified Event Log
+Based on 8 confirmed incidents, each tagged with:
+- `Date`
+- `Event Description`
+- `Location`
+- `Belligerents`
+- `Operation Code Name`
+- `Confirmed Fatality Counts`
 
-Date
+### 🎛️ Dynamic Filtering (via Streamlit Sidebar)
+- Filter events by:
+  - Date range
+  - Belligerent
+  - Operation name
 
-Event Description
+### 📊 Interactive Visualizations
+- **Daily Event Timeline**: Line chart showing number of incidents per day
+- **Cumulative Fatalities**: Area chart of confirmed deaths over time
+- **Operation Frequency**: Bar chart of incidents by operation
+- **Geospatial Map**: Mapbox scatter plot of strike locations (color/size = fatalities)
 
-Location
+### 📰 Optional RSS Enrichment *(toggle `USE_RSS = True`)*
+- Pulls relevant live articles from Google News RSS
+- Adds recent titles & URLs as context-rich event entries
 
-Belligerents Involved
+---
 
-Operation Code Name
+## 🛠️ Technical Stack
 
-Confirmed Fatality Counts
+| Component    | Library/Tool            |
+|--------------|--------------------------|
+| Backend      | Python, Pandas, datetime |
+| Frontend     | Streamlit                |
+| Visualization| Plotly Express           |
+| Mapping      | Mapbox (OpenStreetMap)   |
+| RSS Feeds    | `feedparser` *(optional)*|
 
-Dynamic Filtering UI (via Streamlit Sidebar)
+---
 
-Filter by:
+## 🔍 Use Cases
+- Conflict escalation dashboards for NGOs or defense analysts
+- Geopolitical timeline visualization
+- Real-time media correlation (RSS mode)
+- Teaching use cases for geospatial data science
 
-Date range
+---
 
-Belligerent
+## 🚀 How to Run
 
-Operation
+1. Install dependencies:
 
-Interactive Charts (Plotly-based):
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-📈 Timeline of daily conflict events
+2. Launch the app:
 
-📊 Cumulative fatalities over time
+    ```bash
+    streamlit run conflict_timeline_streamlit_app.py
+    ```
 
-📌 Frequency of military operations
+3. *(Optional)*: Flip `USE_RSS = True` inside the script to enable live news enrichment.
 
-🗺️ Interactive map (Mapbox) of strikes by location and severity
+---
 
-Optional RSS Enrichment
-
-Uses Google News RSS feeds to enrich the dataset with live media reports (toggle with USE_RSS = True)
-
-🛠️ Technical Stack:
-Backend: Python (Pandas, datetime)
-
-Frontend/Visualization: Streamlit + Plotly
-
-Optional Data Source: feedparser for Google News RSS
-
-Geolocation: Static lat/lon mappings for known hotspots (e.g., Pahalgam, LoC, Lahore)
-
-🔍 Use Cases:
-Conflict monitoring dashboards for NGOs / defense analysts
-
-Event timeline visualization in geopolitical research
-
-Real-time narrative construction with RSS integration
-
-Teaching tool for conflict data science workflows
