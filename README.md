@@ -1,4 +1,6 @@
 📊 Project Title: Comprehensive Conflict Timeline Analysis (April–May 2025)
+
+
 🎯 Objective:
 To provide a data-driven, geospatial and temporal analysis of the military escalation between India and Pakistan during April–May 2025, using confirmed fatality counts, operation names, and strategic event details — presented interactively via a Streamlit web app.
 
